@@ -11,7 +11,22 @@
 	width: 90%;
 	border: 2px solid black;
 	margin: 0 auto;
+	 -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	transition: all-ease 2s; 
+	-webkit-transition: filter ease 2s; 
+	opacity: 1;
+	 transition: opacity 5s ease-in; 
 	
+}
+.video:hover{
+	 -webkit-filter: grayscale(1);
+	filter: grayscale(1); 
+
+}  
+.video:hover{
+	transition: opacity 5s ease-out;
+	opacity: 0
 }
 
 figcaption{
@@ -22,9 +37,22 @@ figcaption{
 	width:75%;
 	border:5px double grey;
 	border-radius:20px;
+	
 }
 button{
 	margin-bottom: 5px;
 	flex-basis: 200px;
 	font-size:125%;
+	/* -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite; */
+	animation: rotate 10s;
 }
+
+@keyframes rotate{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+  
